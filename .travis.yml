@@ -1,0 +1,9 @@
+sudo: required
+
+language: go
+
+services:
+  - docker
+
+script:
+  - docker build -t go-multi-stage-docker:latest . && docker run --rm go-multi-stage-docker
